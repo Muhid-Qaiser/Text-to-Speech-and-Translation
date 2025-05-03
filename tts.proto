@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tts;
+
+service TTSService {
+  rpc GenerateSpeech (TTSRequest) returns (TTSResponse);
+  rpc GenerateSpeechBase64 (TTSRequest) returns (TTSBase64Response);  // ← ADD THIS LINE
+}
+
+message TTSRequest {
+  string text = 1;
+  string language = 2;
+}
+
+message TTSResponse {
+  bytes audio = 1;
+}
+
+message TTSBase64Response {
+  string audio_base64 = 1;
+}

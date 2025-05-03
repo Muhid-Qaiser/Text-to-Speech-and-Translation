@@ -1,0 +1,11 @@
+streamlit
+torch
+transformers
+torchaudio
+sentencepiece
+numpy
+grpcio
+grpcio-tools
+grpcio-reflection
+protobuf
+soundfile
